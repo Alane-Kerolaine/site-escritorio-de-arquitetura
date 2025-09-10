@@ -1,0 +1,626 @@
+html, body {
+  height: 100%;
+  margin: 0;
+
+}
+body {
+  display: flex;
+  flex-direction: column; /* importante para empurrar o footer */
+  min-height: 100vh;
+  font-family: "Georama", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100px;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  background-color: #F0F0F0;
+}
+
+h2 {
+  color: #615C5C;
+  font-weight: lighter;
+  font-size: 50px;
+}
+
+#text {
+  font-size: 80px;
+  margin-bottom: 0%;
+}
+
+a{
+  text-decoration: none;
+}
+
+.site-wrapper{
+    flex: 1;
+}
+
+ /* Estilo para a barra de rolagem */
+        ::-webkit-scrollbar {
+            width: 6px; /* Largura da barra */
+        }
+
+        /* Estilo para o polegar (a parte que você arrasta) */
+        ::-webkit-scrollbar-thumb {
+            background-color: #E88C21; /* Cor do polegar */
+            border-radius: 0px; /* Arredondar cantos */
+        }
+
+        /* Estilo para a faixa (o fundo onde o polegar se move) */
+        ::-webkit-scrollbar-track {
+            background-color:#0D0D0D; /* Cor de fundo */
+        }
+
+#hero {
+   background-image: url(imagens/teste04.png);
+   background-size: cover;       /* cobre toda a área da tela */
+   min-height: 720px;
+}
+
+#navbar {
+   position: fixed;
+    top: 0;
+
+    z-index: 1000; /* Garante que a navbar fique por cima de outros elementos */
+    background-color: #000000b7; /* Adicione uma cor de fundo para a navbar,
+                                 para que o conteúdo não apareça por trás dela */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.582); /* Uma sombra sutil para destacar */
+
+    align-items: center;
+  /* Ativa o Flexbox */
+  display: flex;
+  flex-direction: row;
+
+  /* Distribui o espaço entre os itens. O logo vai para a esquerda e o menu para a direita */
+  justify-content: space-between;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  padding-right: 40px;
+
+  min-width: 100%;
+  min-height: 100px;
+}
+
+
+#o-escritorio, 
+#seçao-contato,
+#seçao-obrigado {
+  padding-top: 40px;
+  padding-left: 50px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+}
+
+#nav-menu a{
+  font-size: 20px;
+  color: white;
+  padding-right: 20px;
+}
+#nav-menu a:hover {
+  color: #E88C21;
+}
+#nav-menu a[aria-current="page"] {
+  color: #E88C21;
+}
+
+
+ul {
+    display: flex;
+    list-style: none;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+
+#know, #know-projects{
+  padding-top: 20px;
+  font-size: 28px;
+  color: #E88C21;
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease; /* animação */
+  display: block;
+}
+
+#know:hover, #know-projects:hover {
+  transform: translateY(-3px);             /* mexidinha */
+  text-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+#projetos {
+  min-width: 100%;
+  min-height: 400px;
+}
+
+#projetos h2 {
+  padding-left: 50px;
+}
+
+#sobre {
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 400px;
+  padding-top: 40px;
+}
+
+#equipe {
+  padding-left: 50px;
+  max-width: 100%;
+  min-height: 400px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#equipe h2 {
+  padding-left: 10px;
+}
+
+#quem-somos {
+  width: 50%;
+  min-height: 200px;
+  padding-left: 50px;
+  box-sizing: border-box; /*faz com que os paddings sejam incluídos dentro dos 50% da largura*/
+  text-align: justify;
+}
+
+#texto-sobre {
+  width: 50%;
+  min-height: 200px;
+  text-align: justify;
+  padding-right: 60px;
+  box-sizing: border-box; /*faz com que os paddings sejam incluídos dentro dos 50% da largura*/
+}
+
+#texto-sobre p {
+  margin-top: 41.5px;
+}
+
+#fotos-equipe {
+  max-width: 100%;
+  padding: 40px;
+  display: flex;              /* coloca os elementos lado a lado */
+  /*justify-content: center;    /* centraliza no meio da tela */
+  gap: 40px;                  /* espaço entre as fotos */
+  flex-wrap: wrap;
+}
+
+.foto-com-legenda #membro1 {
+  max-width: 100%;
+  border-radius: 50% 20% / 10% 40%;
+  filter: drop-shadow(5px 5px 2px rgba(0, 0, 0, 0.100));
+}
+.foto-com-legenda #membro2 {
+  max-width: 100%;
+  border-radius:  40% 40% 30% 90% / 60% 30% 70% 40%;
+  filter: drop-shadow(5px 5px 2px rgba(0, 0, 0, 0.100));
+}
+.foto-com-legenda #membro3 {
+  max-width: 100%;
+  border-radius: 10% 50% / 30% 20%;
+  filter: drop-shadow(5px 5px 2px rgba(0, 0, 0, 0.100));
+}
+.foto-com-legenda #membro4 {
+  max-width: 100%;
+  border-radius: 50% 30% 70% 50% / 60% 40% 60% 70%; 
+  filter: drop-shadow(5px 5px 2px rgba(0, 0, 0, 0.100));
+}
+
+.foto-com-legenda {
+  text-align: center; /* Centraliza o texto e a imagem */
+}
+
+.legenda-foto {
+  /* Não precisa de mais nada, pois herda o alinhamento do container */
+  margin-top: 10px;
+}
+
+#projetos {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+#subnav-projetos {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  color: #615C5C;
+}
+
+#subnav-projetos a {
+  color: #615C5C; /* mesma cor que você já usou no container */
+  text-decoration: none; /* remove o sublinhado */
+}
+
+#subnav-projetos a:hover {
+  color: #E88C21;
+}
+
+#subnav-projetos ul {
+  font-size: 20px;
+  margin: 0px;
+  padding-bottom: 50px;
+  padding-left: 0px;
+}
+
+#projetos h3 {
+  text-align: center;
+  font-size: 50px;
+  letter-spacing: 50px;
+  color: #ccc;
+  font-weight: lighter;
+}
+
+.container-seção-projetos {
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 60px;
+  min-width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.container-seção-projetos::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: var(--bg-img);
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px) brightness(80%);
+  transform: scale(1.1); /* para não aparecer borda do blur */
+  z-index: 0;
+}
+
+/* Garante que o conteúdo (imagens, botões) fique por cima */
+.container-seção-projetos > * {
+  position: relative;
+  z-index: 1;
+}
+
+.container-seção-projetos.active {
+    display: block; /* Mostra apenas a imagem ativa */
+    opacity: 1; /* Transita para opacidade total */
+}
+
+.galeria-container {
+    padding: 20px;
+    position: relative;
+    width: 1000px; /* Largura da sua caixa */
+    height: 800px; /* Altura da sua caixa */
+    margin: 50px auto; /* Centraliza a caixa na página */
+    border: 1px solid #ccc;
+    overflow: hidden; /* Garante que as imagens não "vazem" da caixa */
+}
+
+.container-seção-projetos button {
+  background-color: #cccccc54;
+  height: 50px;
+  display: block; /* Essencial para que margin: auto funcione */
+  margin: 10px auto; /* Reduz a margem do topo para aproximar da imagem, e centraliza horizontalmente */
+  padding-left: 20px;
+  padding: 10px 20px;
+  font-family: "Georama", sans-serif;
+  font-size: 20px;
+}
+
+.container-seção-projetos button:hover {
+  background-color: #E88C21;
+}
+
+#galeria-blocos {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.galeria-imagem1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta a imagem para preencher o espaço */
+    position: absolute; /* Coloca todas as imagens uma em cima da outra */
+    top: 0;
+    left: 0;
+    display: none; /* Esconde todas as imagens por padrão */
+    transition: opacity 0.5s ease-in-out; /* Adiciona uma transição suave */
+    opacity: 0; /* Começa com opacidade 0 para o fade */
+}
+
+.galeria-imagem1.active {
+    display: block; /* Mostra apenas a imagem ativa */
+    opacity: 1; /* Transita para opacidade total */
+}
+
+.galeria-imagem2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta a imagem para preencher o espaço */
+    position: absolute; /* Coloca todas as imagens uma em cima da outra */
+    top: 0;
+    left: 0;
+    display: none; /* Esconde todas as imagens por padrão */
+    transition: opacity 0.5s ease-in-out; /* Adiciona uma transição suave */
+    opacity: 0; /* Começa com opacidade 0 para o fade */
+}
+
+.galeria-imagem2.active {
+    display: block; /* Mostra apenas a imagem ativa */
+    opacity: 1; /* Transita para opacidade total */
+}
+
+.galeria-imagem3 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta a imagem para preencher o espaço */
+    position: absolute; /* Coloca todas as imagens uma em cima da outra */
+    top: 0;
+    left: 0;
+    display: none; /* Esconde todas as imagens por padrão */
+    transition: opacity 0.5s ease-in-out; /* Adiciona uma transição suave */
+    opacity: 0; /* Começa com opacidade 0 para o fade */
+}
+
+.galeria-imagem3.active {
+    display: block; /* Mostra apenas a imagem ativa */
+    opacity: 1; /* Transita para opacidade total */
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    cursor: pointer;
+    color: #615C5C;
+    border-radius: 5px;
+    border-color: #615c5c7e;
+}
+
+#formulario form {
+  min-width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+#email {
+  height: 20%;
+}
+
+#mensagem {
+  width: 40%;
+  font-family: "Georama", sans-serif;
+}
+
+form button {
+  width: 10%;
+  margin: 0%;
+}
+
+form button:hover {
+  background-color: #E88C21;
+}
+
+footer {
+  padding: 40px;
+  text-align: center;
+  background-color: #0D0D0D;
+  max-width: 100%;
+  min-height: 50vh;
+}
+footer p {
+  color: white;
+}
+footer #copy {
+  color: #615C5C;
+  font-size: small;
+}
+
+#nav-footer{
+   /* Ativa o Flexbox */
+  display: flex;
+
+  /* Distribui o espaço entre os itens. O logo vai para a esquerda e o menu para a direita */
+  justify-content: space-between;
+  min-height: 200px;
+  padding: 0px;
+  text-align: left;
+}
+#contato {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  padding-left: 20px;
+}
+#logo-footer {
+  width: 50%;
+}
+#socials {
+  text-align: left;
+}
+footer a {
+  color: white;
+}
+footer a:hover {
+  color: #E88C21;
+}
+
+.links:hover {
+  color: #E88C21;
+}
+#copy {
+  padding-top: 100px;
+}
+
+#address {
+  padding-left: 20px;
+  padding-right: 40px;
+}
+
+iframe {
+  width:100%; 
+  height:"200";
+  border-radius: 5px;     /* cantos arredondados (opcional) */
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.568); /* sombra leve */
+}
+
+
+/* --- Media Query para Mobile --- */
+
+@media (max-width: 768px) {
+  /* Estilos que serão aplicados somente em telas com até 768px de largura */
+
+  #hero {
+   min-height: 30vh;
+}
+  
+  /* 1. Navbar e Menu */
+
+  #logo {
+    margin: 0 auto;
+  }
+  #navbar {
+  display: flex;
+  flex-direction: column; /* Empilha logo + menu */
+  align-items: center;    /* Centraliza tudo */
+  text-align: center;
+}
+
+#nav-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza os links */
+  justify-content: center; 
+  width: 100%;
+  padding-top: 10px;
+  transform: translateX(-10px); /* ajusta no olho */
+}
+
+#nav-menu a {
+  font-size: small;
+  text-align: center; /* Garante que o texto dentro do link fique centralizado */
+  display: block;     /* Faz o link ocupar a largura toda */
+}
+
+#o-escritorio {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+  /* 2. Seções de Conteúdo */
+  #sobre {
+    flex-direction: column; /* Empilha as divs da seção "Sobre" */
+    align-items: center;
+  }
+  
+  #quem-somos, #texto-sobre {
+    width: 100%; /* Ocupa a largura total da tela */
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #equipe {
+  padding-left: 10px;
+}
+
+  /* 3. Fotos da Equipe */
+  #fotos-equipe {
+    flex-direction: column; /* Empilha as fotos */
+    align-items: center;
+  }
+
+  #projetos h2 {
+    padding-left: 20px;
+  }
+
+  #projetos h3 {
+    font-size: 20px;
+    letter-spacing: 15px;
+  }
+
+#residencial,
+#comercial,
+#interiores,
+#seçao-obrigado {
+  scroll-margin-top: 220px;
+}
+
+  .container-seção-projetos::before {
+  filter: blur(0px) brightness(100%);
+}
+
+.container-seção-projetos button {
+  margin-top: 60px;
+}
+
+  /* 4. Galeria de Projetos */
+  .galeria-container {
+    width: auto; /* Ajusta para uma largura percentual */
+    height: 90%; /* A altura se adapta ao conteúdo */
+    border: none;
+  }
+
+  .galeria-imagem1,
+  .galeria-imagem2,
+  .galeria-imagem3 {
+    display: none !important; /* Força a ocultação */
+    opacity: 0 !important;   /* Força a opacidade zero */
+  }
+
+  /* 5. Tamanhos de Fonte */
+  h2, #text {
+    font-size: 30px; /* Reduz o tamanho da fonte para não quebrar o layout */
+  }
+
+  #formulario form {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#email {
+  height: 20%;
+  width: 40%;
+}
+
+#mensagem {
+  width: 60%;
+  height: 100px;
+}
+
+form button {
+  width: 20%;
+  margin: 0%;
+}
+
+#seçao-obrigado p {
+  text-align: justify;
+}
+
+  /* 6. Footer */
+  footer {
+    min-height: 80vh
+  }
+  #nav-footer {
+    flex-direction: column; /* Empilha os elementos do rodapé */
+    text-align: center;
+    align-items: center;
+  }
+  #contato, #logo-footer {
+    width: 100%;
+    padding-left: 0;
+  }
+  #address {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+}

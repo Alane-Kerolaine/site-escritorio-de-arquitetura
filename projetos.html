@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMF Arquitetura</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+</head>
+<body>
+    <div class="site-wrapper">
+        <div id="hero"></div>
+        <header id="navbar">
+                <div id="logo">
+                    <a href="home.html"><img src="imagens/logo.png" alt="Logo Taciana Feitosa Arquitetura"></a>
+                </div>
+                <nav id="nav-menu">
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="sobre.html" rel="prev">Sobre</a></li>
+                        <li><a href="projetos.html" aria-current="page">Projetos</a></li>
+                        <li><a href="contato.html" rel="next">Contato</a></li>
+                    </ul>
+                </nav>
+        </header>
+        <section id="projetos">
+            <h2>Projetos</h2>
+
+            <div id="galeria-blocos">
+
+                <nav id="subnav-projetos">
+                    <ul>
+                        <li><a href="#residencial">Residencial</a></li>
+                        <li><a href="#comercial">Comercial</a></li>
+                        <li><a href="#interiores">Interiores</a></li>
+                    </ul>
+                </nav>
+
+                <h3 id="residencial">Residencial</h3>
+                <div class="container-seção-projetos">
+                    <button id="anterior1">&lt;</button>
+                    <div class="galeria-container">
+                        <img src="imagens/residencial01.jpeg" alt="Descrição da Imagem 1" class="galeria-imagem1 active">
+                        <img src="imagens/residencial02.jpeg" alt="Descrição da Imagem 2" class="galeria-imagem1">
+                        <img src="imagens/residencial03.jpeg" alt="Descrição da Imagem 3" class="galeria-imagem1">
+                    </div>
+                    <button id="proxima1">&gt;</button>
+                </div>
+                <h3 id="comercial">Comercial</h3>
+                <div class="container-seção-projetos">
+                    <button id="anterior2">&lt;</button>
+                    <div class="galeria-container">
+                        <img src="imagens/comercial01.jpeg" alt="Descrição da Imagem 1" class="galeria-imagem2 active">
+                        <img src="imagens/comercial02.jpeg" alt="Descrição da Imagem 2" class="galeria-imagem2">
+                        <img src="imagens/comercial03.jpeg" alt="Descrição da Imagem 3" class="galeria-imagem2">
+                    </div>
+                    <button id="proxima2">&gt;</button>
+                </div>
+
+                <h3 id="interiores">Interiores</h3>
+                <div class="container-seção-projetos">
+                    <button id="anterior3">&lt;</button>
+                    <div class="galeria-container">
+                        <img src="imagens/interiores01.jpeg" alt="Descrição da Imagem 1" class="galeria-imagem3 active">
+                        <img src="imagens/interiores02.jpg" alt="Descrição da Imagem 2" class="galeria-imagem3">
+                        <img src="imagens/interiores03.jpg" alt="Descrição da Imagem 3" class="galeria-imagem3">
+                    </div>
+                    <button id="proxima3">&gt;</button>
+                </div>
+            </div>
+
+
+
+        <script src="meu-script.js"></script>
+        </section>
+
+    </div>
+
+    <footer>
+        <section id="nav-footer">
+            <div id="logo-footer">
+                <a href="home.html"><img src="imagens/logo.png" alt="Logo Taciana Feitosa Arquitetura"></a>
+            </div>
+            <div id="contato">
+                <div id="socials">
+                    <a href="https://www.instagram.com/tacianafeitosa.arquitetura" target="_blank" rel="external">
+                        <p class="links">Instagram</p>
+                    </a>
+                    <a href="https://wa.me/5581998186353?text=Olá%21%20Gostaria%20de%20mais%20informações%2E" target="_blank" rel="external">
+                        <p class="links">Whatsapp</p>
+                    </a>
+                    <p>E-mail: <a href="mailto:tmfarquitetura@gmail.com">tmfarquitetura@gmail.com</a></p>
+                </div>
+                <div id="address">
+                    <p>Endereço: Rua Guimarães Peixoto, 75, Casa Amarela - Sala 403</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.7060879321616!2d-34.91002588891978!3d-8.029209591964081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab19acdc021c59%3A0xab7c858df081034b!2sR.%20Guimar%C3%A3es%20Peixoto%2C%2075%20-%20Casa%20Amarela%2C%20Recife%20-%20PE%2C%2052051-305!5e0!3m2!1spt-BR!2sbr!4v1756226894215!5m2!1spt-BR!2sbr" width="500" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+        <p id="copy">&copy; 2025 TMF Arquitetura - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
