@@ -560,6 +560,10 @@ iframe {
   margin-top: 60px;
 }
 
+.container-seção-projetos h3 {
+  color: #615C5C;
+}
+
   /* 4. Galeria de Projetos */
   .galeria-container {
     width: auto; /* Ajusta para uma largura percentual */
